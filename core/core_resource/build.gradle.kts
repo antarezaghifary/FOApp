@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.awesome.onboarding"
+    namespace = "com.awesome.core_resource"
     compileSdk = 35
 
     defaultConfig {
@@ -24,15 +24,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
-    }
-
-    viewBinding{
-        enable = true
+        jvmTarget = "11"
     }
 }
 
@@ -41,15 +37,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-
-    implementation(project(":feature:login"))
-    implementation(project(":core:core_common"))
-    implementation(project(":core:core_navigation"))
-    implementation(project(":core:core_resource"))
-
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
